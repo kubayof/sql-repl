@@ -12,4 +12,7 @@ public class TestUtils {
             }
         }
     }
+
+    //Hide constructor for utility class
+    private TestUtils() {}
 }

@@ -9,10 +9,10 @@ import java.util.Objects;
 import java.util.Scanner;
 
 /**
- * Uses resources ddl.sql and dml.sql to create tables and populate them with date respectively
+ * Uses resources ddl.sql and dml.sql to create tables and populate them with data respectively
  */
 public class InitDbCommand extends JdbcCommand {
-    private final DbLogger logger = DbLoggerFactory.getInstance().getLogger(InitDbCommand.class);
+    private final DbLogger mLogger = DbLoggerFactory.getInstance().getLogger(InitDbCommand.class);
 
     @Override
     public void execute() {
@@ -44,15 +44,15 @@ public class InitDbCommand extends JdbcCommand {
                 try {
                     statement.execute(query);
                 } catch (SQLException e) {
-                    logger.msg(MessageFormat.format("Error while executing query '{0}': {1}",
+                    mLogger.msg(MessageFormat.format("Error while executing query '{0}': {1}",
                             query,
                             e.getMessage()));
-                    e.printStackTrace(logger.getWriter());
+                    e.printStackTrace(mLogger.getmWriter());
                 }
             }
         } catch (SQLException e) {
-            logger.msg("Exception while closing connection: " + e.getMessage());
-            e.printStackTrace(logger.getWriter());
+            mLogger.msg("Exception while closing connection: " + e.getMessage());
+            e.printStackTrace(mLogger.getmWriter());
         }
     }
 }

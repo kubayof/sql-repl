@@ -5,6 +5,11 @@ import example.command.Commands;
 
 import java.util.Scanner;
 
+/**
+ * Simple repl, type command described in {@link example.command.Commands} with ';' at the end,
+ * or type 'exit;' to close repl
+ * @see example.command.Commands Commands
+ */
 public class DbRepl {
     public void run() {
         showInstruction();
@@ -35,10 +40,10 @@ public class DbRepl {
     private void showInstruction() {
         System.out.println("Welcome to database tool");
         System.out.println("Available commands:");
-        System.out.println("\tinit - initialize database");
-        System.out.println("\tlog <names of tables separated with space> - generate log from specified tables");
-        System.out.println("\totherwise - execute entered string as SQL query");
-        System.out.println("\texit - stop program");
+        System.out.println("\tinit; - initialize database");
+        System.out.println("\tlog <names of tables separated with space>; - generate log from specified tables");
+        System.out.println("\texit; - stop program");
+        System.out.println("\totherwise execute entered string as SQL query");
         System.out.println("Each command must end up with ';'");
     }
 }

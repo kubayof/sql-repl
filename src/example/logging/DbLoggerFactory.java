@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Provides loggers for program, creates one DbLoggerInstance per class
+ * Provides loggers for program, creates one DbLogger instance per class
  */
 public class DbLoggerFactory {
     private static final DbLoggerFactory instance = new DbLoggerFactory();
@@ -50,7 +50,7 @@ public class DbLoggerFactory {
             throw new IllegalArgumentException(logger.formatMessage("Writer cannot be null"));
         }
         printWriter = new PrintWriter(writer);
-        loggers.values().forEach(logger -> logger.setWriter(printWriter));
+        loggers.values().forEach(logger -> logger.setmWriter(printWriter));
     }
 
     public Writer getWriter() {

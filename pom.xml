@@ -68,7 +68,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.maventest.App</mainClass>
+                            <mainClass>example.Startup</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

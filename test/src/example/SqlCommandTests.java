@@ -2,7 +2,6 @@ package example;
 
 import example.command.InitDbCommand;
 import example.command.SqlCommand;
-import example.logging.DbLogger;
 import example.logging.DbLoggerFactory;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;

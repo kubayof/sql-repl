@@ -1,0 +1,3 @@
+Log for table 'customers':
+{customer_id = 1; first_name = First; last_name = User; }
+{customer_id = 2; first_name = Second; last_name = One; }
